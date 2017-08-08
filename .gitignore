@@ -1,1 +1,5 @@
 /misc
+compile.bat
+*.exe
+*.obj
+*~
