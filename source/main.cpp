@@ -1,5 +1,6 @@
 #include "TGALib.h"
 
 int main(int argc, char** argv) {
-  TGAImage someImage(5, 5, 5);
+  tga_image someImage(5, 5, 5);
+  someImage.load_tga_file("C:\\Users\\bcoder\\Documents\\Cosmo_Kramer.tga");
 }

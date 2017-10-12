@@ -1,7 +1,9 @@
 #ifndef _TGALIB_H
 #define _TGALIB_H
 
-struct TGAHeader {
+#include <string>
+
+struct tga_header {
   char idlength;
   char colourmaptype;
   char datatypecode;
@@ -16,11 +18,11 @@ struct TGAHeader {
   char imagedescriptor;
 };
 
-struct TGAPixel {
+struct tga_pixel {
   unsigned char r, g, b, a;
 };
 
-class TGAImage {
+class tga_image {
 
  private:
   int width;
@@ -28,8 +30,10 @@ class TGAImage {
   int bytes_per_pixel;
 
  public:
-  TGAImage();
-  TGAImage(int w, int h, int bpp);
+  tga_image();
+  tga_image(int w, int h, int bpp);
+
+  void load_tga_file(std::string file_path);
 
 };
 
