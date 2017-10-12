@@ -29,11 +29,16 @@ class tga_image {
   int height;
   int bytes_per_pixel;
 
+  char* file_data;
+  int file_data_length;
+
  public:
   tga_image();
   tga_image(int w, int h, int bpp);
+  ~tga_image();
 
   void load_tga_file(std::string file_path);
+  void save_tga_file(std::string file_path);
 
 };
 
